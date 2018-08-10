@@ -14,7 +14,8 @@
     "pretest": "node bin/crypto_create_CA.js demo --dev --silent",
     "test": "mocha test --color -R spec --recursive --timeout 200000 --bail",
     "generate_doc": "make doc",
-    "generate_autodoc": "./node_modules/autodoc/bin/autodoc -o _tmp_generated_doc bin/binaryStream.js"
+    "generate_autodoc": "./node_modules/autodoc/bin/autodoc -o _tmp_generated_doc bin/binaryStream.js",
+    "start": "node bin/simple_server"
   },
   "repository": {
     "type": "git",

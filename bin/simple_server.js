@@ -162,26 +162,24 @@ server.on("post_initialize", function () {
         armStateTag.setValueFromSource(new Variant({dataType: DataType.Int32, value: currentState}));
     }, 10000);
 
-/*
-
     const modeTag = addressSpace.addVariable({
         organizedBy: myDevices,
         browseName: "Mode",
         nodeId: "ns=1;s=Mode",
         dataType: "String",
-        value: new Variant({dataType: DataType.String, value: armState})
+        value: new Variant({dataType: DataType.String, value: modeTag})
     });
 
     setInterval(function () {
         if (Math.random() > 0.1) {
             return
         }
-	var valuesArray = ['Pick', 'Place', 'Glue']
-        var index = Math.round(Math.random() * (statesArray.length - 1));
+	    var valuesArray = ['Pick', 'Place', 'Glue']
+        var index = Math.round(Math.random() * (valuesArray.length - 1));
         const currentValue = valuesArray[index]
         modeTag.setValueFromSource(new Variant({dataType: DataType.String, value: currentValue}));
     }, 10000);
-*/
+
     /**
      * variation 0:
      * ------------
