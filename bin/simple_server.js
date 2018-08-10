@@ -167,7 +167,7 @@ server.on("post_initialize", function () {
         browseName: "Mode",
         nodeId: "ns=1;s=Mode",
         dataType: "String",
-        value: new Variant({dataType: DataType.String, value: modeTag})
+        value: new Variant({dataType: DataType.String, value: 'Pick'})
     });
 
     setInterval(function () {
