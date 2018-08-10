@@ -171,9 +171,6 @@ server.on("post_initialize", function () {
     });
 
     setInterval(function () {
-        if (Math.random() > 0.1) {
-            return
-        }
 	    var valuesArray = ['Pick', 'Place', 'Glue']
         var index = Math.round(Math.random() * (valuesArray.length - 1));
         const currentValue = valuesArray[index]
@@ -197,9 +194,6 @@ server.on("post_initialize", function () {
     });
 
     setInterval(function () {
-        if (Math.random() > 0.1) {
-            return
-        }
         var currentValue = Math.round(Math.random() * 100);
         totalCardsTag.setValueFromSource(new Variant({dataType: DataType.Int32, value: currentValue}));
     }, 10000);
