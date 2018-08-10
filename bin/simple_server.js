@@ -180,6 +180,32 @@ server.on("post_initialize", function () {
         modeTag.setValueFromSource(new Variant({dataType: DataType.String, value: currentValue}));
     }, 10000);
 
+    const totalCardsCapabilityTag = addressSpace.addVariable({
+        organizedBy: myDevices,
+        browseName: "TotalCardsCapability",
+        nodeId: "ns=1;s=TotalCardsCapability",
+        dataType: "Integer",
+        value: new Variant({dataType: DataType.Int32, value: 100})
+    });
+
+    const totalCardsTag = addressSpace.addVariable({
+        organizedBy: myDevices,
+        browseName: "TotalCards",
+        nodeId: "ns=1;s=TotalCards",
+        dataType: "Integer",
+        value: new Variant({dataType: DataType.Int32, value: 0})
+    });
+
+    setInterval(function () {
+        if (Math.random() > 0.1) {
+            return
+        }
+        var currentValue = Math.round(Math.random() * 100);
+        totalCardsTag.setValueFromSource(new Variant({dataType: DataType.Int32, value: currentValue}));
+    }, 10000);
+
+
+
     /**
      * variation 0:
      * ------------
